@@ -4,13 +4,17 @@ Minkabu Data Dictionary(MDD)向けのRSSフィードを提供するプラグイ�
 
 Wordpressコアの `wp-includes/feed-rss2.php` をベースに改変しています。
 
+## インストール方法
+
+mddfeedディレクトリをpluginsフォルダに置き、管理画面から有効にします。
+
 ## フィードURL
 
-example.com というドメインでWordpressを公開した場合、
-http://example.com/?feed=mdd
-もしくは
-http://example.com/feed/mdd/
-がフィードのURLになります。
+example.com というドメインでWordpressを公開した場合、以下がフィードのURLになります。
+
+* http://example.com/?feed=mdd
+* http://example.com/feed/mdd/
+
 ※後者はパーマリンクを利用している場合です。
 
 詳しくは、[WordPress フィード配信](http://wpdocs.osdn.jp/WordPress_%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E9%85%8D%E4%BF%A1)をご覧ください。
@@ -34,5 +38,4 @@ http://example.com/feed/mdd/
 
 ## 注意点
 
-公開せずに下書きから削除したものは`post_name`で判断できますが、公開せずに非公開にしたものは判断できませんので、
-そのようなオペレーションを避けてもらう必要があります。
+公開せずに下書きから削除したものは`post_name`で判断できますが、公開せずに非公開にしたものは判断できませんので、そのようなオペレーションを避けてもらう必要があります。
