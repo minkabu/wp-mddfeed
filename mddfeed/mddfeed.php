@@ -5,7 +5,7 @@
 */
 /*
 Plugin Name: MDDFeed
-Plugin URI: https://minkabu.co.jp/
+Plugin URI: https://github.com/minkabu/wp-mddfeed
 Description: Minkabu Data Dictionary用のRSSフィードを出力する
 Author: Hiromasa Kawabata
 Version: 1.0
