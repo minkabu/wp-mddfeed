@@ -1,4 +1,7 @@
 <?php
+// 開発用の日時出力
+//echo date("Y/m/d H:i:s");
+
 /**
  * RSS2 Feed Template for displaying RSS2 Posts feed.
  *
@@ -82,12 +85,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 	 */
 	do_action( 'rss2_head');
 
-	$query = array(
- 	   'post_status' => array('publish', 'private', 'trash')    
-	);
-	$loop = new WP_Query($query);
-
-	while ( $loop->have_posts() ) : $loop->the_post();
+	while( have_posts()) : the_post();
 
 	$post_name = get_post_field( 'post_name', get_the_ID() );
 	if ( substr( $post_name, 0, 9 ) === "__trashed" ) {
