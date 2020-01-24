@@ -30,6 +30,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 	xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/" 
 	xmlns:mdd="http://mkdd.net/rss/1.0"
 	<?php
 	/**
