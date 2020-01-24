@@ -44,14 +44,18 @@ do_action( 'rss_tag_pre', 'rss2' );
 
 <channel>
   <title><?php wp_title_rss(); ?></title>
-  <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
-  <link><?php bloginfo_rss('url') ?></link>
   <description><?php bloginfo_rss("description") ?></description>
+  <link><?php bloginfo_rss('url') ?></link>
+  <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
+  <language><?php bloginfo_rss( 'language' ); ?></language>
+  <image>
+    <link><?php self_link(); ?></link>
+    <url><?php self_link(); ?>/images/head_logo.png</url>
+  </image>
   <lastBuildDate><?php
     $date = get_lastpostmodified( 'GMT' );
     echo $date ? mysql2date( 'r', $date, false ) : date( 'r' );
   ?></lastBuildDate>
-  <language><?php bloginfo_rss( 'language' ); ?></language>
   <sy:updatePeriod><?php
     $duration = 'hourly';
 
